@@ -27,6 +27,8 @@
 todo
 * 自己开通微软的Azure的GPT-4服务
 * 完成24年会总结
+* 升级VScode
+* 翻译CDB文档
   
 #### 
 ![]()，符号都是英文格式，其中[]中写插入的图片名称，当然也可以不写，()中填图片地址，可以是网址，也可以是本地文件的绝对路径，博文中是放在本md文件相同文件夹下，所以前面是./
@@ -34,3 +36,5 @@ todo
 安装了MPE的小伙伴参考一下这个@import <文件名>
 
 @import<>
+
+docker cp /home/ESG/new_asia/dispose/mysql/my.cnf bc:/etc/mysql/my.cnf
