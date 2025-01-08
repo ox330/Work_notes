@@ -38,3 +38,16 @@ todo
 @import<>
 
 docker cp /home/ESG/new_asia/dispose/mysql/my.cnf bc:/etc/mysql/my.cnf
+
+### 1/8
+
+#### ESG部署
+所有容器都正常启动以后
+/home/new_asia/ pip install sqlalchemy[asyncio]
+ while read requirement: ;do pip install $requirement:done < requirements.txt   (在dockefile中配置镜像源使安装更快)
+
+ 最后一步：初始数据，执行系统初始化脚本，把图表，item等刷新进去：python ./scripts/system_initialize.py
+
+访问网站查看数据是否刷进去
+最后使用nohup在后台启动程序，进程数为4
+nohup gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
